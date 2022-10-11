@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="JUST.png">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="alarm.css">
+    <title>CA195_Alarm</title>
+</head>
+<body>
+    <div class="clock-container">
+        <img src="clcok.png" alt="Clock image" width="100px">
+        <div style="margin-top: 20px;"> <span style="color: red; 
+        font-size: 60px; font-weight: bolder; font-family: monospace;">
+         CA195 Clock</span><br>
+            <span style="color: yellow; font-weight: bold;">
+                Online Alarm Clock. Designed to wake you up.</span></div>
+
+        <nav>
+            <a href="alarm.html" >Home</a>
+            <a href="ourTeam.html">OurTeam</a>
+            <a href="about.html">AboutUs</a>
+            <a href="contactUs.html" style="background-color: green;">ConatctUs</a>
+            <a href="index.html">LogOut</a>
+        </nav>
+    </div>
+
+    <div class="container" id="all">
+        <div style="text-align:center">
+          <h1 style="color: white;">Contact Us</h1>
+        </div>
+        <div class="row">
+          <div class="column">
+            <form action=" ">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="email">Email:</label> <br>
+              <input type="email" id="email" name="email" placeholder="Enter Your Email"> <br>
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">SOMALIA </option>
+                <option value="canada">KENYA</option>
+                <option value="usa">CANADA </option>
+                <option value="usa">USA</option>
+                <option value="usa">FRANCE</option>
+                <option value="usa">GERMANY</option>
+                <option value="usa">SOUTH AFRICA</option>
+                <option value="usa">MALAISIA</option>
+                <option value="usa">SUDAN</option>
+                <option value="usa">OTHERS</option>
+              </select>
+              <label for="comment">comment</label>
+              <textarea id="comment" name="comment" placeholder="Write comment.." style="height:170px"></textarea>
+              <button id="submit" onclick="send_info()">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <script>
+    function send_info(){
+      container = document.getElementById('all')
+      container.innerHTML = 'Thank You For Your Contacting Us. <br> We Will Reach You Shortly. <br>'
+      container.style="font-size: 40px; color:green; font-weight:bold; text-align: center;\
+      background-color: white; margin-top: 100px"
+      ok_button = document.createElement('a')
+      ok_button.href = 'alarm.html'
+      ok_button.text = 'OK'
+      ok_button.style = "background-color: red; color: white; width:80px; height:40px;"
+      container.appendChild(ok_button)
+    }
+  </script>
+</body>
+</html>

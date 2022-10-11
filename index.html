@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="JUST.png">
+    <title>CA195_Alarm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+            body {
+            display: flex;
+            justify-content: center;
+            font-family: 'Kumbh Sans', sans-serif;
+            background-image: url("bodyBackground.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 600px;
+            }
+            .login {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 70px 0;
+            width: 380px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-family: 'Montserrat',sans-serif;
+            box-shadow: -4px 4px 12px 1px rgba(0,0,0,0.4);
+            }
+            .login header {
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 33px;
+            font-weight: 600;
+            margin: 0 0 35px 0;
+            }
+            .field {
+            background-color: #fff;
+            width: 100%;
+            margin-bottom: 15px;
+            display: flex;
+            }
+            .field span {
+            color: #222;
+            width: 40px;
+            line-height: 45px;
+            text-align: center;
+            }
+            .field input {
+            width: 100%;
+            height: 45px;
+            font-size: 1.1rem;
+            padding: 5px;
+            color: #34495e;
+            border: none;
+            }
+            .field input::placeholder {
+            color: #95a5a6;
+            }
+            input:focus, input:active, input:hover {
+            outline: none;
+            }
+            .forgot-password {
+            width: 100%;
+            margin-bottom: 15px;
+            }
+            .forgot-password button {
+            color: #FFF;
+            text-decoration: none;
+            background-color: black;
+            }
+            .forgot-password button:hover {
+            text-decoration: underline;
+            }
+            .submit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 45px;
+            margin-bottom: 45px;
+            font-family: 'Poppins',sans-serif;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #0074D9;
+            border: none;
+            transition: all 0.1s linear;
+            }
+            .submit:hover {
+            cursor: pointer;
+            background-color: #0070d1;
+            }
+            .login-form-copy {
+            margin-bottom: 15px;
+            }
+            .login-form__sign-up {
+            text-decoration: none;
+            color: #3498db;
+            }
+            .login-form__sign-up:hover {
+            text-decoration: underline;
+            }
+            .social-icons {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            }
+            /* .social-icon {
+            
+            } */
+            .facebook {
+            background-color: #3b5998;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-bottom: 35px;
+            }
+
+            .instagram {
+            background-color: #F56040;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-bottom: 35px;
+            }
+
+            .twitter {
+            background-color: #00acee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-bottom: 35px;
+            }
+            .google {
+            background-color: #DB4437;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-bottom: 35px;
+            }
+
+            .linkedin {
+            background-color: #2867B2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-bottom: 35px;
+        }
+    </style>
+</head>
+<body>
+    <form action=" " class="login">
+        <header>Login</header>
+        <div class="field"><span></span><input type="text" placeholder="Email or User Name" required id="userName"></div>
+        <div class="field"><span></span><input type="password" placeholder="Password" required id="password"></div>
+        <a class="forgot-password"><button onclick="forgot_password()">Forgot password?</button></a>
+        <button class="submit" onclick="check()">LOGIN</button>
+        <span class="login-form-copy">Or login with</span>
+        <div class="social-icons">
+      
+          <div class="facebook"><span >F</span></div>
+          <div class="instagram"><span>In</span></div>
+          <div class="twitter"><span >Tw</span></div>
+ 
+          <div class="google"><span>Gg</span></div>
+          <div class="linkedin"><span>Li</span></div>
+        </div>
+      <span class="logn-form-copy">Don't have an account? <a href=" " class="login-form__sign-up">Sign up</a></span>
+      </form>
+
+      <script>
+        userNames = ['mooha', 'just.edu.so', 'groupj']
+        password = 12345
+
+        function check(){
+            userEnteredUserName = document.getElementById('userName').value
+            userEnteredPassword = document.getElementById('password').value
+            if(userEnteredUserName == userNames[0] || userEnteredUserName == userNames[1] 
+            || userEnteredUserName == userNames[2]){
+                if(userEnteredPassword == password){
+                    document.getElementsByTagName('form')[0].action = 'alarm.html'
+                }
+                else{
+                    alert('Invalid username or password!')
+                }
+            }
+            else{
+                alert('Invslid username or password!')
+            }
+        }
+        function forgot_password(){
+            alert('A reset Passowrd Link has been sent to your Email Address.')
+        }
+    </script>
+</body>
+</html>

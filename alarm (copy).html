@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Alarm</title>
+    <link rel="stylesheet" href="alarm.css">
+    <script src="alarm.js"></script>
+    <link rel="icon" href="JUST.png">  <!-- Website Icon -->
+</head>
+<body>
+    <div class="clock-container">
+        <img src="clcok.png" alt="Clock image" width="100px">
+        <div style="margin-top: 20px;"> <span style="color: red; 
+        font-size: 60px; font-weight: bolder; font-family: monospace;">
+         ALARM Clock</span><br>
+            <span style="color: yellow; font-weight: bold;">
+                Online Alarm Clock. Designed to wake you up.</span></div>
+
+  
+    </div>
+
+    <div class="main-container">
+        <p style="font-size: 30px; color: white; font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif; margin-top: 70px;">
+            Wake me up at :</p>
+            
+        <div class="sec-container">
+            <div class="bt-container">
+                <button onclick="night_mode()" id="modeButton">night mode</button>
+                <p style="color: white; font-size: 15px;">Current time :
+                    <span id="time-span"></span>
+                </p>
+            </div>
+            <div class="user-time">
+                <input id="hour" value="00">
+                <span id="colon">:</span>
+                <input id="minute" value="00">
+            </div>
+
+            <div style="display: grid;grid-template-columns: auto auto;">
+                <div style="display: grid;grid-template-columns: auto auto;">
+                    <button class="plus-button" id="hour-plus" onclick="hourPlus()">+</button>
+                    <button class="minus-button" id="hour-minus" onclick="hourMinus()">-</button>
+                </div>
+                <div style="display: grid;grid-template-columns: auto auto;">
+                    <button class="plus-button" id="minute-plus" onclick="minutePlus()">+</button>
+                    <button class="minus-button" id="minute-minus" onclick="minuteMinus()">-</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="font-size: 30px; color: white; font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif; margin-top: 70px;">With the sound of : </div>
+
+        <div class="sound-container">
+            <button  onclick="prevSound()" id="prevButton"><</button>
+            <div style="display: grid;grid-template-columns: auto;">
+                <div style="color: white; font-weight: bold;text-align: center;"
+                id="sound-title">COCKEREL</div>
+                <img src="cock.jpg" alt="Clock Image for sound" class="sound-image">
+
+                <div style="display: grid; grid-template-columns: auto auto;">
+                    <button id="soundButton" onclick="playSound()">>|</button>
+                    <div style="color: white; font-weight: bold;text-align: left;
+                    ">Preview Sound</div>
+                </div>
+            </div>
+            <button onclick="nextSound()" id="nextButton">></button>
+        </div>
+    </div>
+
+    <div id="alarmPara" ></div>
+
+    <div class="buttons-container">
+        <button onclick="setAlarm()" id="setAlarm">SET ALARM</button>
+
+        <div id="or"> </div>
+    </div>
+
+    <div style="margin-left: 400px; font-size: 20px;margin-top: 50px; color: white;">
+        Like Alarm Clock on facebook:</div>
+    <a href="https://www.facebook.com/Jamhuriya">
+        <button id="likeButton">
+            <img src="like.png" alt="Like Image" width="20px" height="15px" 
+            style="margin-right: 10px;">Like
+        </button>
+    </a>
+    
+    <a href="http://facebook.com/signup" style="color: white;
+    text-decoration: none;">70k people like this.
+    <span style="font-size: 20px;color: yellow;font-weight: bold;">sign up</span>
+     to see what your friends like.</a>
+
+     <p style="color: white; margin-left: 80px; text-align: center; margin-top: 30px;
+     font-weight: bold;">
+        Once loaded. the online alarm clock will work even if the
+        if the internet connection goes down. <br>
+        Send your comments and ideas about improvements to myclock@just.edu.so <br>
+        Copywright &copy; Abdiqani Ilyas 2022. All rights reserved. 
+     </p>
+</body>
+</html>

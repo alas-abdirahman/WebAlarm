@@ -1,0 +1,33 @@
+  .about-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    font-weight: bold;
+  }
+  .column{
+    border: 2px solid;
+  }
+  #column1{
+    font-size: 25px;
+    color: white;
+    background-color: red;
+  }
+  #column2{
+    font-size: 21px;
+    color: white;
+    background-color: blue;
+  }
+  #column3{
+    font-size: 25px;
+    color: white;
+    background-image: url('woodBackground.jpeg');
+  }
+  header{
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+
